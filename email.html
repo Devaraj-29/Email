@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>My title</title>
+        <script type="text/javascript">
+       function validate(){
+           var email=document.getElementById("email").value;
+           var rex=/^([a-z0-9\.-]+)@([a-z0-9-]+).([a-z]{2,8})(.[a-z]{2,8})?$/
+           if(rex.test(email))
+           {
+               document.getElementById("emaillabel").innerHTML="valid";
+               document.getElementById("emaillabel").style.visibility="visible";
+               document.getElementById("emaillabel").style.color="green";
+           }
+           else{
+            document.getElementById("emaillabel").innerHTML="invalid";
+               document.getElementById("emaillabel").style.visibility="visible";
+               document.getElementById("emaillabel").style.color="red";
+           }
+       }
+        </script>
+    </head>
+
+    <body>
+        <form> <input id="email" placeholder="email" type="text"><br>
+            <label id="emaillabel" style="color: red;visibility: hidden;">Invalid</label>
+            <br>
+            <button onclick="validate()" type="button">submit</button>
+        </form>
+       
+    </body>
+
+</html>
